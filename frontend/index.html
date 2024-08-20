@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap-grid.min.css">
+
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Student Management Panel</h1>
+    <form class="row" id="studentForm">
+      <label class="col-3" for="firstName">First Name:</label>
+      <input class="col-3" type="text" id="firstName" required>
+
+      <label class="col-3" for="lastName">Last Name:</label>
+      <input class="col-3" type="text" id="lastName" required>
+
+      <label class="col-3" for="middleName">Middle Name:</label>
+      <input class="col-3" type="text" id="middleName" required>
+
+      <label class="col-3" for="birthdate">Date of Birth:</label>
+      <input class="col-3" type="date" id="birthdate" required>
+
+      <label class="col-3" for="startYear">Start Year:</label>
+      <input class="col-3" type="number" id="startYear" required>
+
+      <label class="col-3" for="faculty">Faculty:</label>
+      <input class="col-3" type="text" id="faculty" required>
+
+      <div class="col-9" id="error" style="color: red;"></div>
+      <button class="col-3 btn" type="button" id="addStudentBtn">Add Student</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <label class="col-3" for="filterName">Search by Full Name:</label>
+      <input class="col-3" type="text" id="filterName" oninput="applyFilters()">
+      <br>
+
+      <label class="col-3" for="filterFaculty">Search by Faculty:</label>
+      <input class="col-3" type="text" id="filterFaculty" oninput="applyFilters()">
+      <br>
+
+      <label class="col-3" for="filterStartYear">Search by Start Year:</label>
+      <input class="col-3" type="number" id="filterStartYear" oninput="applyFilters()">
+      <br>
+
+      <label class="col-3" for="filterEndYear">Search by End Year:</label>
+      <input class="col-3" type="number" id="filterEndYear" oninput="applyFilters()">
+    </div>
+  </div>
+
+  <div class="container">
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th id="fullNameHeader"><a href="#">Student Full Name</a></th>
+          <th id="facultyHeader"><a href="#">Faculty</a></th>
+          <th id="birthdateHeader"><a href="#">Date of Birth and Age</a></th>
+          <th id="startYearHeader"><a href="#">Years of Study</a></th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+  </div>
+</body>
+
+</html>

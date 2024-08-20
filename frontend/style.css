@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "open sans", sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  color: black;
+  background-color: #eaeaea;
+}
+
+.container {
+  margin-bottom: 15px;
+}
+
+.form_tb {
+  padding: 5px 150px;
+  display: grid;
+  grid-template-columns: (2, 6fr);
+  grid-gap: 5px;
+}
+
+label {
+  color: rgb(18, 5, 100);
+}
+
+
+.btn {
+  background-color: rgb(10, 129, 2);
+  color: beige;
+  transition: background-color 0.2;
+}
+
+.btn:hover {
+  background-color: rgb(128, 243, 141);
+}
+
+
+.title {
+  padding: 5px 150px;
+}
+
+.form_f {
+  display: flex;
+  padding: 20px 150px;
+}
+
+.tb {
+  padding: 5px 150px;
+}
+
+input {
+  height: 20px;
+}
+
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
